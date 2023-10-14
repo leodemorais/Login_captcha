@@ -1,6 +1,8 @@
 (function() {
     const fonts = ["cursive", "sans-serif", "serif", "monospace"];
     let captchaValue = "";
+    const validUser = "seuUsuario"; // Defina o usuário válido
+    const validPassword = "suaSenha"; // Defina a senha válida
 
     function generateCaptcha() {
         let value = btoa(Math.random() * 1000000000);
@@ -35,13 +37,20 @@
 
     document.querySelector('.login-form #login-btn').addEventListener('click', function () {
         let inputCaptchaValue = document.querySelector('.captcha input').value;
+        let inputUser = document.querySelector('.login-form #username').value; // Campo de entrada do usuário
+        let inputPassword = document.querySelector('.login-form #password').value; // Campo de entrada da senha
+
         if (inputCaptchaValue === captchaValue) {
-            console.log('Logado! Sucesso!');
+            if (inputUser === validUser && inputPassword === validPassword) {
+                console.log('Logado! Sucesso!');
+            } else {
+                console.log('Usuário ou senha inválidos!');
+            }
         } else {
             console.log('Captcha inválido!');
         }
     });
 
-    // Adicao do atributo autocomplete aos campos de entrada
+    // Adicione o atributo autocomplete aos campos de entrada
     document.querySelector('.captcha input').setAttribute('autocomplete', 'off');
 })();
