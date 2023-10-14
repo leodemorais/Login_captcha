@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Login+Captcha</title>
+    </head>
+
+        <body>
+
+            <div class="login-form">
+                <div class="form-title">
+                    Login
+                </div>
+                <div class="form-input">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="form-input">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password">
+                </div>
+                <div class="captcha">
+                    <label for="captcha-input">Insira o Captcha</label>
+                    <div class="preview"></div>
+                    <div class="captcha-form">
+                        <input type="text" id="captcha-form" placeholder="Insira o texto captcha">
+                        <button class="captcha-refresh">
+                            <i class="fa fa-refresh"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-input">
+                    <button id="login-bnt">Login</button>
+                </div>
+            </div>
+            <!-- gerador de alertas-->
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script src="script.js"></script>
+            
+        </body>
+
+</html>
