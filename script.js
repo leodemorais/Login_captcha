@@ -1,8 +1,8 @@
 (function() {
     const fonts = ["cursive", "sans-serif", "serif", "monospace"];
     let captchaValue = "";
-    const validUser = "seuUsuario"; // Defina o usuário válido
-    const validPassword = "suaSenha"; // Defina a senha válida
+    const validUser = "leodemorais@gmail.com"; // Defina o usuário válido
+    const validPassword = "1234"; // Defina a senha válida
 
     function generateCaptcha() {
         let value = btoa(Math.random() * 1000000000);
